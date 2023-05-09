@@ -1,10 +1,10 @@
-# Assignment 3
+# Hash Table Implementation
 
 Extendible Hashing is an alternative to probing hashing or separate chaining hashing. It is often utilized when we want to minimize the number of disk accesses required to retrieve data. Collisions in probing hashing or separate chaining could result in several blocks to be examined during a search, which just isn't viable. Extendible hashing allows a search to be formed in two disk accesses. Along with this, insertions also require little disk access.
 
 Extendible Hashing utilizes a directory of buckets. In our case, the directory is a vector of pointers, and the buckets are Node structs which contain the data vectors. Instead of binary, our directory consists of base 10 integers. The hash function determines the size of the directory, and the block size determines the size of the blocks. 
 
-The task of this assignment was to construct a Hash Table which is able to successfully insert a data item into the correct bucket. 
+The task of this project was to construct a Hash Table which is able to successfully insert a data item into the correct bucket. 
 
 To insert a data item:
 We pass the data item via an insert function call. This function determines the hash value of the item in the directory and inserts it into the associated bucket. If the calculate hash value is larger than the values in the directory, double the size of the directory and try to insert again. 
