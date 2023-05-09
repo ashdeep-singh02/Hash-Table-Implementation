@@ -1,5 +1,9 @@
 # Hash Table Implementation
 
+Ashdeep Singh
+
+CSCI 335 (Hunter College)
+
 Extendible Hashing is an alternative to probing hashing or separate chaining hashing. It is often utilized when we want to minimize the number of disk accesses required to retrieve data. Collisions in probing hashing or separate chaining could result in several blocks to be examined during a search, which just isn't viable. Extendible hashing allows a search to be formed in two disk accesses. Along with this, insertions also require little disk access.
 
 Extendible Hashing utilizes a directory of buckets. In our case, the directory is a vector of pointers, and the buckets are Node structs which contain the data vectors. Instead of binary, our directory consists of base 10 integers. The hash function determines the size of the directory, and the block size determines the size of the blocks. 
@@ -44,4 +48,3 @@ will produce the library file `extendible_hash.o` and executable `hash_driver`.
 ./hash_driver
 ```
 
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=7503337&assignment_repo_type=AssignmentRepo)
