@@ -2,8 +2,6 @@
 
 Ashdeep Singh
 
-CSCI 335 (Hunter College)
-
 Extendible Hashing is an alternative to probing hashing or separate chaining hashing. It is often utilized when we want to minimize the number of disk accesses required to retrieve data. Collisions in probing hashing or separate chaining could result in several blocks to be examined during a search, which just isn't viable. Extendible hashing allows a search to be formed in two disk accesses. Along with this, insertions also require little disk access.
 
 Extendible Hashing utilizes a directory of buckets. In our case, the directory is a vector of pointers, and the buckets are Node structs which contain the data vectors. Instead of binary, our directory consists of base 10 integers. The hash function determines the size of the directory, and the block size determines the size of the blocks. 
